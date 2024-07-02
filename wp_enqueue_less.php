@@ -59,7 +59,7 @@ if(function_exists('add_action')){
     $details->hash = $hash;
     
     $details->fileHashes = array();
-    foreach($parser->allParsedFiles() as $fileName){
+    foreach($parser->getParsedFiles() as $fileName){
       $details->fileHashes[$fileName] = md5_file($fileName);
     }
 
